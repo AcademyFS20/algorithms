@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Enlever un caratère</title>
+    </head>
+<body>
+    <h1> Enlever un caratère  à partir d'une chaine </h1>
+
+
+
+    <script type="text/javascript"> 
+        const chaine1 = prompt("entrer la première chaine");
+        const caractere = prompt("entrer le caractere a enlever");
+
+        function car_occurence(chaine,car)
+        {
+            var count = 0
+
+            for(var i = 0; i < chaine.length; i++) 
+            {
+                if (car == chaine[i])
+                    count++
+            }
+            return count
+        }
+
+        console.log("nombre doccurence: "+ car_occurence(chaine1,caractere))
+
+        function string_pull_car (chaine,car) 
+        {
+
+            var tab_res = []
+
+            for (let i =0; i<= chaine.length - 1; i++)
+            {
+                //console.log(chaine[i])
+                if(chaine[i] !== car)
+                {
+                    tab_res[i] = chaine[i]
+                }
+
+            }
+            console.log(tab_res)
+            tab_res = tab_res.filter(function(n){ return n != undefined });
+            console.log("clean tab :  " + tab_res)
+            return tab_res
+        }
+
+        let chaine_resultante = string_pull_car(chaine1,caractere)
+        console.log("chaine resultante: " + chaine_resultante.join(''))
+
+        
+
+    </script>
+
+</body>
+</html>

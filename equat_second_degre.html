@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Second degré</title>
+    </head>
+<body>
+    <h1> equation second degré </h1>
+    /* Scirpt permettrant la résolution des équations de 2éme degré */
+    <script type="text/javascript">
+        const a = Number(prompt('enter la valeur de a'));
+        const b = Number(prompt("entrer la valeur de b"));
+        const c = Number(prompt("entrer la valeur de c"));
+        console.log("valeur de a: "+ a );
+        console.log("valeur de b: "+ b );
+        console.log("valeur de c: "+ c );
+
+        function equat_second_degre_solution(a, b, c){
+            var x1; var x2; var x3;
+
+            var delt = Math.pow(b, 2) - 4*(a*c);
+            if(delt > 0)
+            {
+                x1 = ((-b) - Math.sqrt(delt))/(2*a);
+                x2 = ((-b) + Math.sqrt(delt))/(2*a);
+                console.log("l'équation admet 2 solitons x1 et x2 :\n")
+                console.log("x1 : " + x1)
+                console.log("x2 :" + x2)
+            }
+            else if(delt == 0)
+            {
+                x1 = (-b)/(2*a);
+                console.log("l'équation admet une seul solution -b / 2a : " + x1)
+            }
+            else if(delt < 0)
+            {
+            alert("Le discriminant est inférieur à 0 donc la solution de l'équation c'est l'ensemble vide");
+            }
+        }
+
+        equat_second_degre_solution(a,b,c)
+
+    </script>
+
+</body>
+</html>

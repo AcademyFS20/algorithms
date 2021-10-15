@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Decimal to binary</title>
+    </head>
+<body>
+    <h1> decimal to binary</h1>
+
+
+
+    <script type="text/javascript"> 
+        const nbr = Number(prompt("entrer un nombre entier naturel"));
+
+
+        function decimal_to_binary(number)
+        {   
+            let res = ""
+            while( number !== 0)
+            {
+                res +=  number % 2
+                number = parseInt(number / 2)
+                console.log(number)
+            }
+        rev_res = res.split('').reverse().join('')
+        return rev_res
+        }
+
+        console.log(" le decimal : "+ nbr + " est equivalent a " + decimal_to_binary(nbr) + " en binaire")
+
+        
+
+        
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>calcul de la factorielle</title>
+    </head>
+<body>
+    <h1> calcul de la factorielle </h1>
+
+
+
+    <script type="text/javascript"> 
+        let nombre = Number(prompt("entrer un nombre"))
+        function fact(nbr) 
+        {
+          // Si nbr = 0 la factorielle retournera 1
+            if (nbr === 0)
+            {
+                return 1;
+            }
+          // appelez à nouveau la procédure récursive
+            return nbr * fact(nbr-1);
+        }
+        let fac = fact(nombre)
+        console.log("la factorielle du nobre " + nombre + "  est egale a : "+ fac);
+
+
+        /*function fact2(nbr)
+        {
+            if(nrb == 0)
+            {
+                return 1
+            }
+            else
+            {   
+                for (i=1; i<nbr ; i++) 
+                {
+                    [i]
+                }
+
+            }
+        }*/
+
+    </script>
+
+</body>
+</html>

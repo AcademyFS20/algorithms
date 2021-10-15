@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> calcul du pdgc </title>
+    </head>
+    <body>
+        <h1> calcul du pdgc</h1>
+
+
+
+        <script type="text/javascript"> 
+            const nbr1 = Number(prompt("entrer le premier nombre entier naturel"));
+            const nbr2 = Number(prompt("entrer le deuxième nombre entier naturel"));
+
+            function pgdc(number1,number2)
+            {   
+                if(number2 > number1)
+                    diff = number2 - number1
+                else
+                    diff = number1 - number2
+                /*while(diff > 0)
+                {
+                   diff = number2 - diff
+                }*/
+            return diff
+            }
+
+            console.log(" le pgdc de : "+ nbr1 + " et "+ nbr2 +" est egal a " + pgdc(nbr1,nbr2))
+            
+
+            
+
+        </script>
+
+    </body>
+</html>
